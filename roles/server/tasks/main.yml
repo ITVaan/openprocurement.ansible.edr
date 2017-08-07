@@ -50,6 +50,11 @@
   become: true
   become_user: "{{ build_user }}"
 
+- name: Copy keys.yaml
+  template: src=keys.yaml.j2 dest={{ path_to_code }}/keys.yaml
+  become: true
+  become_user: "{{ build_user }}"
+
 - name: Load buildout
   shell: "python bootstrap.py -c api.cfg chdir={{ path_to_code }}"
   become: true
