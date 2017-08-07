@@ -13,7 +13,6 @@ path_to_work: /home/{{ build_user }}
 path_to_code: "{{ path_to_work }}/edr_integrations"
 
 # Config for edr service
-edr_api_token: token
 edr_api_port: 443
 edr_api_host: https://zqedr-api.nais.gov.ua
 edr_timeout_min: 1
@@ -30,6 +29,7 @@ path_to_config: /home/{{ deploy_user }}
 
 # Path to ini
 path_to_auth: "{{ path_to_config }}"
+path_to_keys: "{{ path_to_config }}"
 
 logs_bucket: test
 logs_dir: test
